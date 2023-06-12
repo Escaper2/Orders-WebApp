@@ -1,0 +1,59 @@
+﻿@page
+@model Presentation.Pages.Orders.CreateOrder
+
+@{
+ViewData["Title"] = "Order Details";
+var imgPath = "/images/Group_12.png";
+}
+
+<div class="mainsa">
+    <section class="signup">
+        <div class="sascontainer">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Create Order</h2>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="SenderCity"></label>
+                            <input type="text" name="SenderCity" id="SenderCity" placeholder="Enter sender city"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="SenderLocation"></label>
+                            <input type="text" name="SenderLocation" id="SenderLocation"
+                                   placeholder="Enter sender location"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="RecipientCity"></label>
+                            <input type="text" name="RecipientCity" id="RecipientCity"
+                                   placeholder="Enter recipient city"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="RecipientLocation"></label>
+                            <input type="text" name="RecipientLocation" id="RecipientLocation"
+                                   placeholder="Enter recipient location"/>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="LoadWeight"></label>
+                            <input type="text" name="LoadWeight" id="LoadWeight" placeholder="Enter load weight"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="PickupDate"></label>
+                            <input type="text" name="PickupDate" id="PickupDate"
+                                   placeholder="Enter pickup date" onfocus="(this.type='date')"
+                                   onblur="(this.type='text')"/>
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
+                        </div>
+                    </form>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="@imgPath" asp-append-version="true" alt="logo"></figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+    

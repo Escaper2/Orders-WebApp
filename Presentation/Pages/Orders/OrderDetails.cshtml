@@ -1,0 +1,93 @@
+﻿@page
+@model Presentation.Pages.Orders.OrderDetails
+
+@{
+ViewData["Title"] = "Order Details";
+var imgPath = "/images/Group_7.png";
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h1>Order @Model.Order.OrderId details:</h1>
+            </div>
+            <div class="card-body text-center">
+                <div class="row">
+                    <div class="col card-text">
+                        <div class="card-row">
+                            <span>Sender city: </span>
+                            <span>@Model.Order.SenderCity</span>
+                        </div>
+                        <hr/>
+                        <div class="card-row">
+                            <span>Sender location: </span>
+                            <span>@Model.Order.SenderLocation</span>
+                        </div>
+                        <hr/>
+                        <div class="card-row">
+                            <span>Recipient city: </span>
+                            <span>@Model.Order.RecipientCity</span>
+                        </div>
+                        <hr/>
+                        <div class="card-row">
+                            <span>Recipient location: </span>
+                            <span>@Model.Order.RecipientLocation</span>
+                        </div>
+                        <hr/>
+                        <div class="card-row">
+                            <span>Load weight: </span>
+                            <span>@Model.Order.LoadWeight</span>
+                        </div>
+                        <hr/>
+                        <div class="card-row">
+                            <span>Pickup date: </span>
+                            <span>@Model.Order.PickupDate</span>
+                        </div>
+                        <hr/>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div style="border-right: 1px solid rgba(0,0,0,.1)">
+                            <img class="card-img-top" src="@imgPath" asp-append-version="true" alt="logo"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <div class="card-footer text-center">
+                            <a asp-page="/Index" class="btn btn-primary">Back</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

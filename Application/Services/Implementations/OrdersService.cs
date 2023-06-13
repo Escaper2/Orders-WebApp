@@ -17,9 +17,8 @@ public class OrdersService : IOrdersService
     public async Task<Order> CreateOrderAsync(string senderCity, string senderLocation, string recipientCity,
         string recipientLocation, uint loadWeight, DateOnly pickupDate, CancellationToken cancellationToken)
     {
-        var index =  await _context.Orders.MaxAsync(x => x.OrderId, cancellationToken) + 1;
-        
-        var order = new Order(index, senderCity, senderLocation, recipientCity, recipientLocation, loadWeight,
+
+        var order = new Order(senderCity, senderLocation, recipientCity, recipientLocation, loadWeight,
             pickupDate);
 
         _context.Orders.Add(order);

@@ -1,10 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DataAccess.Models;
 
 public class Order
 {
-    public Order(uint orderId, string senderCity, string senderLocation, string recipientCity, string recipientLocation, uint loadWeight, DateOnly pickupDate)
+    public Order( string senderCity, string senderLocation, string recipientCity, string recipientLocation, uint loadWeight, DateOnly pickupDate)
     {
-        OrderId = orderId;
         SenderCity = senderCity;
         SenderLocation = senderLocation;
         RecipientCity = recipientCity;
@@ -12,7 +14,7 @@ public class Order
         LoadWeight = loadWeight;
         PickupDate = pickupDate;
     }
-
+    
     public uint OrderId { get; set; }
     public string SenderCity { get; set; }
     public string SenderLocation { get; set; }
